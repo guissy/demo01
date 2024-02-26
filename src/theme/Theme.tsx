@@ -9,6 +9,7 @@ const Theme: React.FC<PropsWithChildren> = ({ children }) => {
         theme={{
           token: {
             colorPrimary: '#0abf53',
+            colorLink: '#0abf53',
           },
           components: {
             Menu: {
