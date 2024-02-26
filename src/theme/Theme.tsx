@@ -8,8 +8,14 @@ const Theme: React.FC<PropsWithChildren> = ({ children }) => {
       <ConfigProvider
         theme={{
           token: {
-            controlHeight: 28,
+            colorPrimary: '#0abf53',
           },
+          components: {
+            Menu: {
+              itemHeight: 24,
+              itemSelectedColor: 'inherit',
+            }
+          }
         }}
       >
         {children}
