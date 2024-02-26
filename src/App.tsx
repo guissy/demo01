@@ -40,8 +40,8 @@ const App: React.FC = () => {
       <Theme>
         <CurrentUserProvider>
           <div style={{
-            background: 'linear-gradient(45deg, rgb(43, 110, 177) 0%, rgb(10, 38, 67) 100%) center bottom / cover no-repeat rgb(239, 245, 233)',
-            height: '100vh'
+            // background: 'linear-gradient(45deg, rgb(43, 110, 177) 0%, rgb(10, 38, 67) 100%) center bottom / cover no-repeat rgb(239, 245, 233)',
+            // height: '100vh'
           }}
           >
             {window.Cypress ? (
