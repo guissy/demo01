@@ -11,6 +11,7 @@ import VideoPay2 from './VideoPay2.tsx';
 import VideoPay3 from './VideoPay3.tsx';
 import Solutions from './Solutions.tsx';
 import Footer from './Footer.tsx';
+import ConcatUs from './ConcatUs.tsx';
 
 const HomePage: React.FC = () => {
   const { width } = useWindowSize();
@@ -19,15 +20,15 @@ const HomePage: React.FC = () => {
   const { token } = useToken();
   return (
     <main id="home-page">
+      <Header isSmall={isSmall}/>
       <section className="max-w-7xl mx-4 xl:mx-auto lg:mx-8">
-        <Header isSmall={isSmall}/>
         <div className="md:flex gap-x-8 lg:gap-x-40 md:gap-x-20">
           <div className="flex-1 flex flex-col justify-center items-start">
             <h1 className="text-6xl font-bold mb-4">Engineered for ambition</h1>
             <p className="text-lg font-light">End-to-end payments, data, and financial management in a single solution.
               Meet the
               financial technology platform that helps you realize your ambitions faster.</p>
-            <Button type="primary" size="large" className="inline mt-4 mb-8">Talk to our team</Button>
+            <ConcatUs className="mt-4 mb-8" />
           </div>
           <div className="w-full md:w-[520px] md:max-h-[629px]">
             <img src="https://via.placeholder.com/520x629" alt="placeholder" className="w-full"/>
