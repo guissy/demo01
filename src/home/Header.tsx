@@ -8,6 +8,7 @@ import HeaderMenu from './HeaderMenu.tsx';
 import ConcatUs from './ConcatUs.tsx';
 import HeaderSearch from './HeaderSearch.tsx';
 import LoginButton from './LoginButton.tsx';
+import guissyPdf from '../assets/guissy.pdf';
 
 
 const Header: React.FC<{ isSmall: boolean }> = ({ isSmall }) => {
@@ -22,7 +23,9 @@ const Header: React.FC<{ isSmall: boolean }> = ({ isSmall }) => {
       <header className="sticky top-0 bg-white z-50">
         <section className="max-w-7xl mx-4 xl:mx-auto md:mx-8">
           <div className={cx("flex space-x-6 h-24 items-center justify-between")}>
-            <Logo/>
+            <Button type="link" href={guissyPdf} download="钟履桂-前端开发.pdf">
+              <Logo/>
+            </Button>
             {
               isSmall
                 ? (
