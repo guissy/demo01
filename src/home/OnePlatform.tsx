@@ -9,7 +9,7 @@ const OnePlatform: React.FC = () => {
   const { token } = useToken();
   return (
     <div className="my-16">
-      <h2 className="text-3xl w-[785px]">One platform to accept payments, protect revenue, and control your
+      <h2 className="text-3xl">One platform to accept payments, protect revenue, and control your
         finances.</h2>
 
       <ul className="md:grid md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-x-8 items-stretch">

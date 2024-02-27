@@ -92,7 +92,16 @@ const Solutions: React.FC = () => {
         Ambition looks different to every business. Learn how Adyen is helping the world’s leading brands realize
         theirs.
       </p>
-      <Tabs items={tabs} tabPosition={layout==="horizontal" ? 'top' : 'right'}/>
+      {layout === 'horizontal'
+        ? <Tabs items={tabs} />
+        : <div className="space-y-10">
+        {tabs!.map((tab, index) => (
+          <div key={index}>
+            <div>{tab.label}</div>
+            {tab.children}
+          </div>
+        ))}
+      </div>}
     </div>
   );
 };
