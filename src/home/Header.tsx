@@ -20,7 +20,7 @@ const Header: React.FC<{ isSmall: boolean }> = ({ isSmall }) => {
   return (
     <>
       <header className="sticky top-0 bg-white z-50">
-        <section className="max-w-7xl mx-auto">
+        <section className="max-w-7xl mx-4 xl:mx-auto md:mx-8">
           <div className={cx("flex space-x-6 h-24 items-center justify-between")}>
             <Logo/>
             {
