@@ -12,6 +12,7 @@ import { useLocation } from 'react-use';
 import CurrentUserProvider from './CurrentUserProvider.tsx';
 import SysOptionProvider from './SysOptionProvider.tsx';
 import HomePage from './home/HomePage.tsx';
+import { LangProvider } from './locales/LangContext.tsx';
 
 const App: React.FC = () => {
   const base = `/web`;
@@ -39,22 +40,24 @@ const App: React.FC = () => {
     <SysOptionProvider>
       <Theme>
         <CurrentUserProvider>
-          <div style={{
-            // background: 'linear-gradient(45deg, rgb(43, 110, 177) 0%, rgb(10, 38, 67) 100%) center bottom / cover no-repeat rgb(239, 245, 233)',
-            // height: '100vh'
-          }}
-          >
-            {window.Cypress ? (
-              <BrowserRouter basename={base}>
-                <Routes>
-                  {/*<Route path="/login" element={<LoginRoute/>}/>*/}
-                  <Route path="/*" element={<HomePage/>}/>
-                </Routes>
-              </BrowserRouter>
-            ) : (
-              <RouterProvider router={router}/>
-            )}
-          </div>
+          <LangProvider>
+            <div style={{
+              // background: 'linear-gradient(45deg, rgb(43, 110, 177) 0%, rgb(10, 38, 67) 100%) center bottom / cover no-repeat rgb(239, 245, 233)',
+              // height: '100vh'
+            }}
+            >
+              {window.Cypress ? (
+                <BrowserRouter basename={base}>
+                  <Routes>
+                    {/*<Route path="/login" element={<LoginRoute/>}/>*/}
+                    <Route path="/*" element={<HomePage/>}/>
+                  </Routes>
+                </BrowserRouter>
+              ) : (
+                <RouterProvider router={router}/>
+              )}
+            </div>
+          </LangProvider>
         </CurrentUserProvider>
       </Theme>
     </SysOptionProvider>

@@ -12,6 +12,7 @@ import VideoPay3 from './VideoPay3.tsx';
 import Solutions from './Solutions.tsx';
 import Footer from './Footer.tsx';
 import ConcatUs from './ConcatUs.tsx';
+import { Trans } from '@lingui/macro';
 
 const HomePage: React.FC = () => {
   const { width } = useWindowSize();
@@ -24,10 +25,8 @@ const HomePage: React.FC = () => {
       <section className="max-w-7xl mx-4 xl:mx-auto lg:mx-8">
         <div className="md:flex gap-x-8 lg:gap-x-40 md:gap-x-20">
           <div className="flex-1 flex flex-col justify-center items-start">
-            <h1 className="text-6xl font-bold mb-4">Engineered for ambition</h1>
-            <p className="text-lg font-light">End-to-end payments, data, and financial management in a single solution.
-              Meet the
-              financial technology platform that helps you realize your ambitions faster.</p>
+            <h1 className="text-6xl font-bold mb-4"><Trans>Engineered for ambition</Trans></h1>
+            <p className="text-lg font-light"><Trans>End-to-end payments, data, and financial management in a single solution. Meet the financial technology platform that helps you realize your ambitions faster.</Trans></p>
             <ConcatUs className="mt-4 mb-8" />
           </div>
           <div className="w-full md:w-[520px] md:max-h-[629px]">
