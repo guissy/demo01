@@ -3,6 +3,8 @@ export default {
   plugins: {
     tailwindcss: {},
     autoprefixer: {},
-    'postcss-antd-fixes': {},
+    'postcss-antd-fixes': {
+      prefixes: ['MuiButton-', 'ant-'],
+    },
   },
 }
